@@ -1,0 +1,19 @@
+.App {
+  position: absolute;
+  margin-top: -15%;
+  top: 50%;
+  text-align: center;
+}
+
+button {
+  border: 1px solid black;
+  width: 250px;
+  padding: 5px 5px 5px 5px;
+  display: block;
+  height: 40px;
+  margin: 5px 5px 5px 5px;
+  background-color: darkslategray;
+  font-size: 12px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: aliceblue;
+}

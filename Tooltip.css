@@ -1,0 +1,84 @@
+:root {
+  --tt-text-color: rgb(50, 50, 50);
+  --tt-background-color: #ccc;
+  --tt-margin: 30px;
+  --tt-arrow-size: 6px;
+}
+
+.tt-wrapper {
+  display: inline-block;
+  position: relative;
+}
+
+.tt-msg {
+  position: absolute;
+  border-radius: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 6px;
+  color: var(--tt-text-color);
+  background: var(--tt-background-color);
+  font-size: 14px;
+  font-family: sans-serif;
+  line-height: 1;
+  z-index: 100;
+  white-space: nowrap;
+}
+
+.tt-msg::before {
+  content: ' ';
+  left: 50%;
+  border: solid transparent;
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-width: var(--tt-arrow-size);
+  margin-left: calc(var(--tt-arrow-size) * -1);
+}
+
+.tt-msg.tt-position.top {
+  top: calc(var(--tt-margin) * -1);
+}
+
+.tt-msg.tt-position.top::before {
+  top: 100%;
+  border-top-color: var(--tt-background-color);
+}
+
+.tt-msg.tt-position.right {
+  left: calc(100% + var(--tt-margin));
+  top: 50%;
+  transform: translateX(0) translateY(-50%);
+}
+
+.tt-msg.tt-position.right::before {
+  left: calc(var(--tt-arrow-size) * -1);
+  top: 50%;
+  transform: translateX(0) translateY(-50%);
+  border-right-color: var(--tt-background-color);
+}
+
+.tt-msg.tt-position.bottom {
+  bottom: calc(var(--tt-margin) * -1);
+}
+
+.tt-msg.tt-position.bottom::before {
+  bottom: 100%;
+  border-bottom-color: var(--tt-background-color);
+}
+
+.tt-msg.tt-position.left {
+  left: auto;
+  right: calc(100% + var(--tt-margin));
+  top: 50%;
+  transform: translateX(0) translateY(-50%);
+}
+
+.tt-msg.tt-position.left::before {
+  left: auto;
+  right: calc(var(--tt-arrow-size) * -2);
+  top: 50%;
+  transform: translateX(0) translateY(-50%);
+  border-left-color: var(--tt-background-color);
+}
