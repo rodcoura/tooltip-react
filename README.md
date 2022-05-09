@@ -1,3 +1,3 @@
-# react-ts-5ykpqg
+# tooltip-reacg
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/react-ts-5ykpqg)
+[See on StackBlitz ⚡️](https://react-ts-5ykpqg.stackblitz.io)
